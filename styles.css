@@ -1,0 +1,86 @@
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+margin: 0;
+}
+
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+
+input, button, textarea, select {
+font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+
+#root, #__next {
+isolation: isolate;
+}
+
+
+/* Styles */
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-container img {
+    height: 100vh;
+    width: auto;
+}
+
+.sidebar-container {
+    z-index: 1;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(250, 250, 250)
+}
+
+.form-container {
+    height: max(40vh, 250px);
+    background-color: white;
+    box-shadow: 0 3px 3px 1px rgb(220, 220, 220);
+}
+
+.hero-container {
+    height: max(30vh, 100px);
+}
+
+.create-account {
+    margin: 2.5rem 0 0 3rem;
+    width: 9rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: rgb(89, 108, 59);
+    color: #f3e9d1;
+    border: 2px solid #212416;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #212416;
+    transition: all 0.3s;
+}
+
+.create-account:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 3px 3px 2px 1px #212416;
+    background-color: #4c4d29;
+}
+
+.create-account:active {
+    padding: 0.8rem;
+}
