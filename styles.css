@@ -1,3 +1,8 @@
+@font-face {
+    font-family: NorseBold;
+    src: url("Norse-Bold.otf");
+}
+
 /* Reset */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -34,15 +39,35 @@ isolation: isolate;
 body {
     display: flex;
     flex-direction: row;
-}
-
-.sidebar-container img {
-    height: 100vh;
-    width: auto;
+    font-family: "Open Sans", serif;
 }
 
 .sidebar-container {
     z-index: 1;
+    background-image: url("bg-img.avif");
+    background-size: cover;
+    height: 100vh;
+    width: 70%;
+    min-width: 350px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+    background-color: rgba(102, 102, 102, 0.65);
+}
+
+.logo-container img {
+    width: 100px;
+}
+
+.logo-container h1 {
+    font-size: 5rem;
+    margin: 20px 10px 0 10px;
+    font-family: NorseBold, serif;
+    color: rgb(238, 255, 253);
 }
 
 main {
@@ -52,14 +77,15 @@ main {
     background-color: rgb(250, 250, 250)
 }
 
-.form-container {
-    height: max(40vh, 250px);
-    background-color: white;
-    box-shadow: 0 3px 3px 1px rgb(220, 220, 220);
-}
-
 .hero-container {
     height: max(30vh, 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container h1 {
+    padding: 20px;
 }
 
 .create-account {
@@ -67,6 +93,7 @@ main {
     width: 9rem;
     padding: 0.5rem;
     font-size: 1rem;
+    font-weight: bold;
     background-color: rgb(89, 108, 59);
     color: #f3e9d1;
     border: 2px solid #212416;
@@ -82,5 +109,77 @@ main {
 }
 
 .create-account:active {
-    padding: 0.8rem;
+    transform: translateX(-5px);
+}
+
+.login-label {
+    margin: 1.5rem 0 0 3rem;
+}
+
+.login-label a {
+    text-decoration: underline transparent;
+    font-weight: bold;
+    color: #4c4d29;
+    transition: all 0.3s;
+}
+
+.login-label a:hover {
+    text-decoration: underline #4c4d29;
+}
+
+/* Form styling */
+.form-container {
+    height: max(40vh, 250px);
+    background-color: white;
+    box-shadow: 0 3px 3px 1px rgb(220, 220, 220);
+}
+
+.form-container h2 {
+    padding: 20px 0 0 40px;
+}
+
+.form-row {
+    display: flex;
+}
+
+.form-item {
+    position: relative;
+    margin: 20px 40px;
+}
+
+.form-item input {
+    width: 300px;
+    height: 39px;
+    padding: 6px;
+    border: 1px solid rgb(169, 169, 169);
+    border-radius: 3px;
+}
+
+.form-item input:focus {
+    box-shadow: 0 3px 3px 1px rgb(220, 220, 220);
+    outline: none;
+    border: 2px solid green;
+}
+
+.form-item label {
+    font-family: "Montserrat", serif;
+    font-weight: bold;
+    color: rgb(118, 118, 118);
+    background-color: white;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    margin: 9px 23px;
+    transition: all 0.2s ease;
+}
+
+.form-item input:focus + label,
+.form-item input:valid + label {
+    transform: translate(-15px, -20px) scale(0.88);
+    z-index: 1;
+    padding: 0 3px;
+}
+
+.form-item input:focus:invalid {
+    border: 2px solid red;
 }

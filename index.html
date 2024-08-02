@@ -5,22 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naturia</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="sidebar-container">
-        <img src="bg-img.jpg" alt="A nice picture of nature">
-        <div class="logo-container"></div>
+        <div class="logo-container">
+            <img src="logo.png" alt="IBO 2024 Logo">
+            <h1>IMBO 2024</h1>
+        </div>
     </div>
 
     <main>
         <div class="hero-container">
-            <h3></h3>
+            <h1>Compete against the best biologists in the world.<br>Join IMBO 2024 today!</h1>
         </div>
-        <div class="form-container">
+        <form action="" method="get">
+            <div class="form-container">
+                <h2>Let's do this!</h2>
+                <div class="form-row">
+                    <div class="form-item">
+                        <input type="text" id="fname" name="fname" required minlength="1" maxlength="25">
+                        <label for="fname">FIRST NAME</label>
+                    </div>
 
-        </div>
-        <button type="submit" class="create-account">Create Account</button>
-        <p class="login-label"></p>
+                    <div class="form-item">
+                        <input type="text" id="lname" name="lname" required minlength="1" maxlength="25">
+                        <label for="lname">LAST NAME</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-item">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">EMAIL</label>
+                    </div>
+
+                    <div class="form-item">
+                        <input type="tel" id="phone" name="phone" required pattern="\d{8}">
+                        <label for="phone">PHONE NUMBER</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-item">
+                        <input type="password" id="password" name="password" required minlength="5" maxlength="25">
+                        <label for="password">PASSWORD</label>
+                    </div>
+
+                    <div class="form-item">
+                        <input type="password" id="confirmpassword" name="confirmpassword" required minlength="5" maxlength="25">
+                        <label for="confirmpassword">CONFIRM PASSWORD</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="create-account">Create Account</button>
+        </form>
+        <p class="login-label">Already have an account? <a href="#">Log in</a></p>
     </main>
 </body>
 </html>
